@@ -1,0 +1,84 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter' , sans-serif;
+    background: linear-gradient(to top right,#0ea5e9,#e879f9,#fda4af);
+    
+} 
+/* div{
+    border: 20px solid black;
+    width: 100vw;
+} */
+.appcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 50px;
+    
+
+} 
+.taskForm{
+    display: flex;
+}
+
+.taskInput{
+    border: 0;
+    padding: 0px 12px;
+    border-radius: 30px 0px 0px 0px;
+    font-size: 16px;
+}
+.addTaskbtn{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 0px 0px 30px 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task{
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.tasksContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.taskItem{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+}
+.tasksAction{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.under{
+    text-decoration: line-through;
+}
+
+.striker{
+    text-decoration: line-through;
+}
+
+.white_bg{
+    background-color: white;
+}

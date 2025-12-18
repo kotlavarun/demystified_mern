@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script defer src="tasks.js" ></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Varun Sai</h1>
+        <div class="appcontainer"> 
+            <h1>Welcome  varun Sai</h1>
+            <form class="taskForm">
+                <input class="taskInput" pattern="^[A-Za-z ]{3,}$" title="Enter atleast 3 Letters" placeholder="Enter task:"  type="text">
+                <button class="addTaskbtn" type="submit">Add Task</button>
+            </form>
+
+        <select id="sortBtn">
+            <option value="" disabled selected hidden>Select an option</option>
+            <option value="new">Newest First</option>
+            <option value="old">Oldest First</option>
+            <option value="complete">Completed tasks</option>
+        </select>
+
+        <div class="tasksContainer">
+
+        </div>
+        </div>
+    </body>
+</html>
+
+
