@@ -1,0 +1,23 @@
+button{
+    color:white;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+#error-btn{
+    background-color: red;
+}
+#success-btn{
+    background-color:green;
+}
+
+.success-text{
+    color: green;
+}
+.error-text{
+    color: red;
+}

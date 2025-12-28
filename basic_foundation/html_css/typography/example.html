@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Word Break Demo</title>
+
+<style>
+  .container {
+    width: 300px;
+    border: 2px solid #333;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+
+</head>
+<body>
+
+<h2>Word Break vs Word Wrap Demo</h2>
+
+<button onclick="setNormal()">Normal</button>
+<button onclick="setWordBreak()">word-break: break-all</button>
+<button onclick="setWordWrap()">word-wrap / overflow-wrap: break-word</button>
+
+<div id="textBox" class="container">
+  ThisIsAVeryVeryVeryLongWordWithoutAnySpacesThatWillBreakDifferentlyUsingDifferentCSSProperties.
+</div>
+
+<script>
+  const box = document.getElementById("textBox");
+
+  function setNormal() {
+    box.style.wordBreak = "normal";
+    box.style.overflowWrap = "normal";
+  }
+
+  function setWordBreak() {
+    box.style.wordBreak = "break-all";
+    box.style.overflowWrap = "normal";
+  }
+
+  function setWordWrap() {
+    box.style.wordBreak = "normal";
+    box.style.overflowWrap = "break-word"; // same as word-wrap
+  }
+</script>
+
+</body>
+</html>

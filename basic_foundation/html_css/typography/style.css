@@ -1,0 +1,6 @@
+.name{
+  width: 200px;
+  border: 1px solid #000;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
