@@ -1,0 +1,37 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 5%;
+}
+
+.listOne{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20%; */
+    border: 1px solid black;
+}
+.displayText.limit{
+    color: red;
+}
+.countCharacter{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: none;
+}
+
+.content.active {
+  display: block;
+}
