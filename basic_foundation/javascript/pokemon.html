@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" class="pkname">
+        <button class="searchbtn">search</button>
+        <div class="display">
+
+        </div>
+        <script>
+            const pokemon=document.querySelector(".pkname");
+            const btn=document.querySelector(".searchbtn");
+            const displayDiv=document.querySelector(".display");
+
+            btn.addEventListener("click",async function() {
+                const name=pokemon.value.trim().toLowerCase();
+                displayDiv.innerHTML="";
+
+                if(!name){
+                    alert("Type a pokemon name:");
+                    return;
+                }
+
+                try{
+                    const response=await fetch(`https://pokeapi.co/api/v2/pokemon/${encodeURIComponent(name)}`);
+                    const jsonData=await response.json();
+                    console.log("Name, Height, Weight: ", jsonData.name, jsonData.height, jsonData.weight);
+
+                    if(jsonData.name && jsonData.height && jsonData.weight){
+                        displayDiv.innerHTML=`
+                        <article class="pokemon-card">
+                        <h3>${jsonData.name}</h3>
+                        <div class="pokemon-specs">
+                            <p>Height: ${jsonData.height}</p>
+                            <p>Weight: ${jsonData.weight}</p>
+                        </div>
+                        <article>
+                        `
+                    }
+
+                }catch(error){
+                    console.log(error.message);
+                }
+            })
+
+        </script>
+    </body>
+</html>
